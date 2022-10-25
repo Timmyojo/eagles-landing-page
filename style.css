@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&family=Poppins:wght@400;700&display=swap');
 :root {
-    --primary: rgb(251, 166, 8);
+    --primary: #4da3fa;
     --white: #fff;
     --gray: #7c7c7c;
+    --bcg-gray: #f4f4f4;
 }
 
 *::after,
@@ -16,7 +17,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background: #f4f4f4;
+    background: var(--bcg-gray);
 }
 
 li {
@@ -51,7 +52,7 @@ img {
     bottom: -70px;
     right: 0;
     left: 0;
-    background: #f4f4f4;
+    background: var(--bcg-gray);
     transform: skewY(-3deg);
     -webkit-transform: skewY(-3deg);
     -moz-transform: skewY(-3deg);
@@ -72,10 +73,10 @@ img {
 
 
 .navbar .nav-lists {
-    position: fixed;
+    position: absolute;
     left: -100%;
     top: 0;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     flex-direction: column;
     width: 100%;
     gap: 10px;
@@ -83,19 +84,17 @@ img {
 }
 
 .navbar .nav-lists a {
-    color: var(--primary);
+    color: var(--white);
     font-size: 1.5rem;
-    margin: 10px;
-    transition: transform 0.3s linear;
 }
 
 .navbar .nav-lists a:hover {
-    border-bottom: 2px solid orange;
+    font-size: 1.65rem;
 }
 
 .nav-lists.active {
     left: 0;
-    top: 50px;
+    top: 60px;
 }
 
 .hamburger {
@@ -297,7 +296,7 @@ img {
 
 .why-us .perk h4{
     font-size: 1.1rem;
-    color: rgb(247, 213, 111);
+    color: var(--primary);
     margin: 30px 0 20px 0;
 }
 .gallery .gallery-content {
